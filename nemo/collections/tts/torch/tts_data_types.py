@@ -71,6 +71,10 @@ class ReferenceAudio(TTSDataType, WithLens):
     name = "reference_audio"
 
 
+class LossWeight(TTSDataType):
+    name = "loss_weight"
+
+
 MAIN_DATA_TYPES = [Audio, Text]
 VALID_SUPPLEMENTARY_DATA_TYPES = [
     LogMel,
@@ -83,5 +87,6 @@ VALID_SUPPLEMENTARY_DATA_TYPES = [
     Voiced_mask,
     P_voiced,
     ReferenceAudio,
+    LossWeight,
 ]
 DATA_STR2DATA_CLASS = {d.name: d for d in MAIN_DATA_TYPES + VALID_SUPPLEMENTARY_DATA_TYPES}
